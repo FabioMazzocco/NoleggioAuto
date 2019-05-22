@@ -11,10 +11,24 @@ public class Evento implements Comparable<Evento> {
 	
 	private LocalTime tempo ;
 	private TipoEvento tipo ;
-	
+
+	public Evento(LocalTime tempo, TipoEvento tipo) {
+		super();
+		this.tempo = tempo;
+		this.tipo = tipo;
+	}
+
 	@Override
 	public int compareTo(Evento other) {
 		return this.tempo.compareTo(other.tempo);
+	}
+	
+	public LocalTime getTempo() {
+		return tempo;
+	}
+
+	public TipoEvento getTipo() {
+		return tipo;
 	}
 
 }
